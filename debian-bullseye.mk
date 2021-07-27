@@ -35,5 +35,16 @@ apt-deps:
 
 colcon-deps:
 	sudo apt install -y \
-		libtinyxml2-dev \
+		libasio-dev \
 		libeigen3-dev \
+		libtinyxml2-dev \
+		libxaw7-dev \
+		python3-lark \
+		log4cxx-dev \
+		python3-sip-dev \
+		sip-dev \
+		pyqt5-dev \
+		pyqt5-dev-tools \
+		python3-opencv \
+		libopencv-dev \
+		libbullet-dev \
