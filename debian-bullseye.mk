@@ -27,24 +27,33 @@ apt-deps:
 		python3-flake8-polyfill \
 		python3-pip \
 		python3-pytest \
+		python3-pytest-cov \
 		python3-pytest-flake8 \
 		python3-pytest-rerunfailures \
-		python3-pytest-cov \
 		python3-setuptools \
 		wget
 
 colcon-deps:
 	sudo apt install -y \
+		bison \
+		curl \
+		libacl1-dev \
 		libasio-dev \
+		libbullet-dev \
 		libeigen3-dev \
+		libfreetype-dev \
+		liblog4cxx-dev \
+		libopencv-dev \
 		libtinyxml2-dev \
 		libxaw7-dev \
-		python3-lark \
-		log4cxx-dev \
-		python3-sip-dev \
-		sip-dev \
+		libxrandr-dev \
 		pyqt5-dev \
 		pyqt5-dev-tools \
+		python3-lark \
 		python3-opencv \
-		libopencv-dev \
-		libbullet-dev \
+		python3-sip-dev \
+		qtbase5-dev \
+		qtbase5-dev-tools \
+		qttools5-dev \
+		qttools5-dev-tools \
+		sip-dev
