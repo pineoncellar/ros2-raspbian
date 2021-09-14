@@ -1,4 +1,6 @@
 
+all: py-deps apt-deps colcon-deps
+
 py-deps:
 	pip3 install --user \
 		catkin-pkg \
