@@ -16,7 +16,7 @@ generate-env:
 	$(shell env | grep ^ROS_PTYON_VERSION)
 
 py-deps:
-	pip3 install --user \
+	pip3 install --user --upgrade \
 		catkin-pkg \
 		colcon-common-extensions \
 		flake8-blind-except \
