@@ -2,18 +2,21 @@
 all: py-deps apt-deps colcon-deps
 
 # Filter ros2 related environment to file.
+# Run source install/setup.bash to load ROS environment configurations first.
 generate-env:
+	$(shell env | grep ^ROS_VERSION)
+	$(shell env | grep ^PKG_CONFIG_PATH)
+	$(shell env | grep ^ROS_PYTHON_VERSION)
+	$(shell env | grep ^LOGNAME)
 	$(shell env | grep ^AMENT_PRERFIX_PATH)
 	$(shell env | grep ^CMAKE_PREFIX_PATH)
 	$(shell env | grep ^COLCON_PREFIX_PATH)
-	$(shell env | grep ^INVOCATION_ID)
-	$(shell env | grep ^LD_LIBRARY_PATH)
-	$(shell env | grep ^PATH)
-	$(shell env | grep ^PKG_CONFIG_PATH)
 	$(shell env | grep ^PYTHONPATH)
-	$(shell env | grep ^ROS_DISTRO)
+	$(shell env | grep ^LD_LIBRARY_PATH)
 	$(shell env | grep ^ROS_LOCALHOST_ONLY)
-	$(shell env | grep ^ROS_PTYON_VERSION)
+	$(shell env | grep ^PATH)
+	$(shell env | grep ^ROS_DISTRO)
+	$(shell env | grep ^INVOCATION_ID)
 
 py-deps:
 	pip3 install --user --upgrade \
