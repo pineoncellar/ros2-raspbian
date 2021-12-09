@@ -41,6 +41,8 @@ apt-deps:
 		cmake \
 		flake8 \
 		git \
+		python3-catkin \
+		python3-catkin-pkg \
 		python3-flake8 \
 		python3-flake8-docstrings \
 		python3-flake8-polyfill \
