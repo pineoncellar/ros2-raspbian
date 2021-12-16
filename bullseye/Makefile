@@ -17,6 +17,7 @@ generate-env:
 	$(shell env | grep ^PATH)
 	$(shell env | grep ^ROS_DISTRO)
 	$(shell env | grep ^INVOCATION_ID)
+	$(shell env | grep ^AMENT_PREFIX_PATH)
 
 py-deps:
 	pip3 install --user --upgrade \
