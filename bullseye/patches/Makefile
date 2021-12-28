@@ -1,5 +1,5 @@
 
-all: fix-eigen3 fix-sip update-root-dir fix-assimp
+all: fix-eigen3 fix-sip update-root-dir fix-assimp fix-draco
 
 # Update root config dir.
 update-root-dir:
@@ -20,3 +20,6 @@ fix-eigen3:
 # Fix asssimp library not found in 5.1.0 or laster.
 fix-assimp:
 	install -v -m644 rviz_assimp_vendor-extras.cmake.in ../../src/ros2/rviz/rviz_assimp_vendor/
+
+fix-draco:
+	sudo install -v -m644 draco-config.cmake /usr/lib/x86_64-linux-gnu/cmake/draco/draco-config.cmake
