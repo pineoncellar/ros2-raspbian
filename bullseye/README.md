@@ -14,7 +14,7 @@ vcs import src < ros2.repos
 
 3. Apply patches:
 ```bash
-cd bullseye/patches && make
+pushd bullseye/patches && make && popd
 ```
 
 4. Build submodules:
