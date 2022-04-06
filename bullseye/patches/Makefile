@@ -1,5 +1,5 @@
 
-all: fix-eigen3 fix-sip update-root-dir fix-assimp fix-draco
+all: fix-eigen3 fix-sip update-root-dir
 
 # Update root config dir.
 update-root-dir:
