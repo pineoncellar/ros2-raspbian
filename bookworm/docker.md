@@ -8,5 +8,10 @@ sudo docker pull debian:bookworm
 
 2. Build ros2 image:
 ```bash
-sudo docker build -t ros2:bookworm
+sudo docker build -t ros2:bookworm .
+```
+
+3. Build ros2 repos:
+```bash
+sudo docker run -v $PWD:/opt/ros2 -it ros2:bookworm /bin/bash
 ```
