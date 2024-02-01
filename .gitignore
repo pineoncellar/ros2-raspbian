@@ -1,7 +1,8 @@
+/bags
 /build
+/env.list
+/examples
 /install
 /log
 /src
-bags/
-examples/
-/env.list
+/venv
