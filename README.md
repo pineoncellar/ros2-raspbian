@@ -1,6 +1,6 @@
 
 # About
-Build ROS2 on debian stable distributions.
+Build ROS2 (rolling version) on debian stable distributions.
 
 `ros2.repos` is copied from [ros2](https://github.com/ros2/ros2).
 
