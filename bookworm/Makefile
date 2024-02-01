@@ -66,7 +66,10 @@ colcon-deps:
 		libasio-dev \
 		libbullet-dev \
 		libeigen3-dev \
+		libfastcdr-dev \
+		libfoonathan-memory-dev \
 		libfreetype-dev \
+		liblttng-ctl-dev \
 		liblttng-ust-dev \
 		liblog4cxx-dev \
 		libopencv-dev \
