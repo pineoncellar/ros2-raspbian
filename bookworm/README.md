@@ -8,6 +8,7 @@ make -f bookworm/Makefile all
 
 2. Fetch source code:
 ```bash
+source venv/bin/activate
 mkdir src
 vcs import src < ros2.repos
 ```
@@ -19,5 +20,6 @@ pushd bookworm/patches && make && popd
 
 4. Build submodules:
 ```bash
+source venv/bin/activate
 colcon build --symlink-install
 ```

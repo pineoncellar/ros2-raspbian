@@ -1,5 +1,5 @@
 
-all: py-deps apt-deps colcon-deps
+all: apt-deps colcon-deps py-deps
 
 # Filter ros2 related environment to file.
 # Run source install/setup.bash to load ROS environment configurations first.
@@ -19,8 +19,11 @@ generate-env:
 	$(shell env | grep ^INVOCATION_ID)
 	$(shell env | grep ^AMENT_PREFIX_PATH)
 
+# virtualenv for user-level is required in Python-3.11
 py-deps:
-	pip3 install --user --upgrade \
+	python3 -m venv venv
+	. venv/bin/activate && \
+	pip3 install --upgrade \
 		catkin-pkg \
 		colcon-common-extensions \
 		flake8-blind-except \
@@ -64,6 +67,7 @@ colcon-deps:
 		libbullet-dev \
 		libeigen3-dev \
 		libfreetype-dev \
+		liblttng-ust-dev \
 		liblog4cxx-dev \
 		libopencv-dev \
 		libtinyxml2-dev \
