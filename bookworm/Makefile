@@ -60,6 +60,7 @@ apt-deps:
 		python3-pytest-flake8 \
 		python3-pytest-rerunfailures \
 		python3-setuptools \
+		python3-venv \
 		wget
 
 colcon-deps:
@@ -90,3 +91,8 @@ colcon-deps:
 		qttools5-dev \
 		qttools5-dev-tools \
 		sip-dev
+
+
+setup-pip:
+	mkdir ~/.pip
+	install -v -m644 pip.conf ~/.pip/pip.conf
