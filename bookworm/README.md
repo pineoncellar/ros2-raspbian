@@ -23,3 +23,5 @@ pushd bookworm/patches && make && popd
 source venv/bin/activate
 colcon build --symlink-install
 ```
+
+If something goes wrong, run step 3, and try step 4 again.

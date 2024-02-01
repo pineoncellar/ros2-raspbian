@@ -37,7 +37,11 @@ py-deps:
 		rosdistro \
 		rospkg \
 		vcstool \
-		pytest-repeat
+		pytest-repeat \
+		lark \
+		opencv-python \
+		pyqt5 \
+		sip
 
 apt-deps:
 	sudo apt install -y \
