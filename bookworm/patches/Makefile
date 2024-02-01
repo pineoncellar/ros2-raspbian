@@ -1,5 +1,9 @@
 
-all: fix-eigen3 fix-sip update-root-dir
+all: fix-fastrtps
+
+fix-fastrtps:
+	cd ../../src/eProsima/Fast-DDS && \
+	git apply ../../../bookworm/patches/fastrtps-stdint.patch || true
 
 # Update root config dir.
 update-root-dir:

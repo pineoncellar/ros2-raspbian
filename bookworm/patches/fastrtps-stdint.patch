@@ -1,0 +1,24 @@
+diff --git a/src/cpp/statistics/types/monitorservice_typesv1.cxx b/src/cpp/statistics/types/monitorservice_typesv1.cxx
+index 89494b401..7adfc7af9 100644
+--- a/src/cpp/statistics/types/monitorservice_typesv1.cxx
++++ b/src/cpp/statistics/types/monitorservice_typesv1.cxx
+@@ -36,6 +36,7 @@ char dummy;
+ #include <fastcdr/exceptions/BadParamException.h>
+ using namespace eprosima::fastcdr::exception;
+ 
++#include <cstdint>
+ #include <utility>
+ 
+ namespace helper { namespace internal {
+diff --git a/src/cpp/statistics/types/typesv1.cxx b/src/cpp/statistics/types/typesv1.cxx
+index 80c55edc2..48b1fa06e 100644
+--- a/src/cpp/statistics/types/typesv1.cxx
++++ b/src/cpp/statistics/types/typesv1.cxx
+@@ -36,6 +36,7 @@ char dummy;
+ #include <fastcdr/exceptions/BadParamException.h>
+ using namespace eprosima::fastcdr::exception;
+ 
++#include <cstdint>
+ #include <utility>
+ 
+ namespace helper { namespace internal {
