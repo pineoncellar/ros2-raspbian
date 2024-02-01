@@ -1,9 +1,15 @@
 
-all: fix-fastrtps
+all: fix-fastrtps fix-assimp
+
+PATCHES := $(PWD)
 
 fix-fastrtps:
 	cd ../../src/eProsima/Fast-DDS && \
-	git apply ../../../bookworm/patches/fastrtps-stdint.patch || true
+	git apply $(PATCHES)/fastrtps-stdint.patch || true
+
+fix-assimp:
+	cd ../../build/rviz_assimp_vendor/assimp_vendor-prefix/src/assimp_vendor
+	git apply $(PATCHES)/assimp-compare-array.patch || true
 
 # Update root config dir.
 update-root-dir:
@@ -21,9 +27,6 @@ fix-eigen3:
 	sudo install -v -m644 /usr/share/eigen3/cmake/* /usr/lib/x86_64-linux-gnu/cmake/Eigen3/
 	sudo install -v -m644 Eigen3Config.cmake /usr/lib/x86_64-linux-gnu/cmake/Eigen3/
 
-# Fix asssimp library not found in 5.1.0 or laster.
-fix-assimp:
-	install -v -m644 rviz_assimp_vendor-extras.cmake.in ../../src/ros2/rviz/rviz_assimp_vendor/
 
 fix-draco:
 	sudo install -v -m644 draco-config.cmake /usr/lib/x86_64-linux-gnu/cmake/draco/draco-config.cmake
