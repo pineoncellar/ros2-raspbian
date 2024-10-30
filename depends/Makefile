@@ -40,6 +40,7 @@ py-deps:
 		pytest-repeat \
 		lark \
 		opencv-python \
+		empy==3.3.4 \
 		
 
 apt-deps:
