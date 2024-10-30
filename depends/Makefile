@@ -40,8 +40,7 @@ py-deps:
 		pytest-repeat \
 		lark \
 		opencv-python \
-		pyqt5 \
-		sip
+		
 
 apt-deps:
 	sudo apt install -y \
@@ -91,7 +90,6 @@ colcon-deps:
 		qttools5-dev \
 		qttools5-dev-tools \
 		sip-dev
-
 
 setup-pip:
 	mkdir ~/.pip
